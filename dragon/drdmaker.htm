@@ -1,0 +1,629 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//CZ">
+<HTML>
+<HEAD>
+<TITLE>Dračí Doupě - Tvorba postavy</TITLE>
+<BASE target="_top">
+<META http-equiv=Content-Type content="text/html; charset=windows-1250">
+<SCRIPT type="text/javascript" language="JavaScript1.1" src="images.js"></SCRIPT>
+<SCRIPT language="JavaScript1.2" type="text/javascript">
+<!--
+function control()
+{
+//if (document.formular.jmeno.value=="") alert("Nezadal jsi jméno postavy, generátor pak nevypádá, jak má...");
+}
+
+function kontrola()
+{
+if (document.formular.rasa.value=="elf" && document.formular.presvedceni.value=="zákonné zlo")
+{
+alert("Elf nemůže být zákonně zlý!");
+document.formular.presvedceni.focus();
+}
+
+if (document.formular.rasa.value=="lesní elf" && document.formular.presvedceni.value=="zákonné zlo")
+{
+alert("Elf nemůže být zákonně zlý!");
+document.formular.presvedceni.focus();
+}
+
+if (document.formular.rasa.value=="kroll" && document.formular.presvedceni.value=="zákonné dobro")
+{
+alert("Kroll nemůže být zákonně dobrý!");
+document.formular.presvedceni.focus();
+}
+}
+
+function neo()
+{
+var schopnosti = "";
+var pravdepodobnost = "";
+var mechanismy=0;
+var objekty=0;
+var rasa = document.formular.rasa.value;
+if (rasa=="náhodná")
+{
+var cislo_rasa=Math.random();
+var cislo_rasa=Math.round(cislo_rasa*7);
+switch(cislo_rasa)
+{
+case 0:var rasa="hobit";break;
+case 1:var rasa="kudůk";break;
+case 2:var rasa="trpaslík";break;
+case 3:var rasa="lesní elf";break;
+case 4:var rasa="elf";break;
+case 5:var rasa="člověk";break;
+case 6:var rasa="barbar";break;
+case 7:var rasa="kroll";break;
+}
+}
+
+var povolani=document.formular.povolani.value;
+if (povolani=="náhodné")
+{
+var cislo_povolani=Math.random();
+var cislo_povolani=Math.round(cislo_povolani*4);
+switch(cislo_povolani)
+{
+case 0:
+var povolani="válečník";
+break;
+
+case 1:
+var povolani="hraničář";
+break;
+
+case 2:
+var povolani="alchymista";
+break;
+
+case 3:
+var povolani="kouzelník";
+break;
+
+case 4:
+var povolani="zloděj";
+break;
+}
+}
+
+var presvedceni=document.formular.povolani.value;
+if (presvedceni=="náhodné")
+{
+var presvedceni_cislo=Math.random();
+var presvedceni_cislo=Math.round(presvedceni_cislo*4);
+switch(presvedceni_cislo)
+{
+case 0:
+var presvedceni_cislo="zákonné dobro";
+break;
+
+case 1:
+var presvedceni_cislo="zmatené dobro";
+break;
+
+case 2:
+var presvedceni_cislo="neutrální";
+break;
+
+case 3:
+var presvedceni_cislo="zmatené zlo";
+break;
+
+case 4:
+var presvedceni_cislo="zákonné zlo";
+break;
+}
+presvedceni = presvedceni_cislo
+}
+if (rasa=="hobit")
+{
+var sila=Math.random();
+var sila=Math.round(sila*5+1+2);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+10);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*5+1+7);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+9);
+var charisma=Math.random();
+var charisma=Math.round(charisma*10+8);
+var sil=-5;
+var obr=2;
+var odl=0;
+var ynt=-2;
+var chr=3;
+var pohyblivost=10;
+var mechanismy = 5;
+var schopnosti = schopnosti + "hobití čich, ";
+}
+
+if (rasa=="kudůk")
+{
+var sila=Math.random();
+var sila=Math.round(sila*5+1+4);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+9);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*5+1+9);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+8);
+var charisma=Math.random();
+var charisma=Math.round(charisma*5+1+6);
+var sil=-3;
+var obr=1;
+var odl=1;
+var ynt=-2;
+var chr=0;
+var pohyblivost=9;
+var mechanismy = 5;
+}
+
+if (rasa=="trpaslík")
+{
+var sila=Math.random();
+var sila=Math.round(sila*5+1+6);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+6);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*5+1+11);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+7);
+var charisma=Math.random();
+var charisma=Math.round(charisma*5+1+6);
+var sil=1;
+var obr=-2;
+var odl=3;
+var ynt=-3;
+var chr=-2;
+var pohyblivost=8;
+var objekty = 5;
+var schopnosti = schopnosti + "infravidění, ";
+}
+
+if (rasa=="elf")
+{
+var sila=Math.random();
+var sila=Math.round(sila*5+1+5);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+9);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*5+1+5);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+11);
+var charisma=Math.random();
+var charisma=Math.round(charisma*10+8);
+var sil=0;
+var obr=1;
+var odl=-4;
+var ynt=2;
+var chr=2;
+var pohyblivost=12;
+var mechanismy = 5;
+}
+
+if (rasa=="lesní elf")
+{
+var sila=Math.random();
+var sila=Math.round(sila*5+1+5);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+10);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*3+6);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+10);
+var charisma=Math.random();
+var charisma=Math.round(charisma*10+8);
+var sil=0;
+var obr=2;
+var odl=-5;
+var ynt=1;
+var chr=2;
+var pohyblivost=12;
+var mechanismy = 5;
+var schopnosti = schopnosti + "noční vidění, ";
+}
+
+if (rasa=="člověk")
+{
+var sila=Math.random();
+var sila=Math.round(sila*10+6);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+8);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*5+1+8);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+9);
+var charisma=Math.random();
+var charisma=Math.round(charisma*15+2);
+var sil=0;
+var obr=0;
+var odl=0;
+var ynt=0;
+var chr=0;
+var pohyblivost=11;
+}
+
+if (rasa=="barbar")
+{
+var sila=Math.random();
+var sila=Math.round(sila*5+1+9);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+7);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*5+1+10);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+5);
+var charisma=Math.random();
+var charisma=Math.round(charisma*15+1);
+var sil=1;
+var obr=-1;
+var odl=1;
+var ynt=0;
+var chr=-2;
+var pohyblivost=12;
+var objekty = 5;
+}
+
+if (rasa=="kroll")
+{
+var sila=Math.random();
+var sila=Math.round(sila*5+1+10);
+var obratnost=Math.random();
+var obratnost=Math.round(obratnost*5+1+4);
+var odolnost=Math.random();
+var odolnost=Math.round(odolnost*5+1+12);
+var inteligence=Math.random();
+var inteligence=Math.round(inteligence*5+1+1);
+var charisma=Math.random();
+var charisma=Math.round(charisma*10+1);
+var sil=3;
+var obr=-4;
+var odl=3;
+var ynt=-6;
+var chr=-5;
+var pohyblivost=11;
+var objekty = 5;
+var schopnosti = schopnosti + "ultrasluch, ";
+}
+
+if (povolani=="válečník")
+{
+var sila=Math.random();
+if (document.formular.hardmode.checked) {var sila=Math.round(sila*3+3+12) + sil;} else {var sila=Math.round(sila*5+1+12) + sil;}
+var odolnost=Math.random();
+if (document.formular.hardmode.checked) {var odolnost=Math.round(odolnost*3+3+12) + odl;} else {var odolnost=Math.round(odolnost*5+1+12) + odl;}
+var zivoty=10;
+var magenergie = "nic";
+var schopnosti = schopnosti + "přesnost, ";
+}
+
+if (povolani=="hraničář")
+{
+var sila=Math.random();
+if (document.formular.hardmode.checked) {var sila=Math.round(sila*3+3+10) + sil;} else {var sila=Math.round(sila*5+1+10) + sil;}
+var inteligence=Math.random();
+if (document.formular.hardmode.checked) {var inteligence=Math.round(inteligence*3+3+11) + ynt;} else {var inteligence=Math.round(inteligence*5+1+11) + ynt;}
+var zivoty=8;
+var magenergie = 0;
+var schopnosti = schopnosti + "stopování, pes,";
+}
+
+if (povolani=="kouzelník")
+{
+var charisma=Math.random();
+if (document.formular.hardmode.checked) {var charisma=Math.round(charisma*3+3+12) + chr;} else {var charisma=Math.round(charisma*5+1+12) + chr;}
+var inteligence=Math.random();
+if (document.formular.hardmode.checked) {var inteligence=Math.round(inteligence*3+3+13) + ynt;} else {var inteligence=Math.round(inteligence*5+1+13) + ynt;}
+var zivoty=6;
+switch (inteligence)
+{
+case 8:var magenergie = 7;var pravdepodobnost="32%";break;
+case 9:var magenergie = 7;var pravdepodobnost="32%";break;
+case 10:var magenergie = 7;var pravdepodobnost="47%";break;
+case 11:var magenergie = 7;var pravdepodobnost="47%";break;
+case 12:var magenergie = 8;var pravdepodobnost="47%";break;
+case 13:var magenergie = 8;var pravdepodobnost="61%";break;
+case 14:var magenergie = 8;var pravdepodobnost="61%";break;
+case 15:var magenergie = 8;var pravdepodobnost="74%";break;
+case 16:var magenergie = 8;var pravdepodobnost="74%";break;
+case 17:var magenergie = 8;var pravdepodobnost="85%";break;
+case 18:var magenergie = 8;var pravdepodobnost="85%";break;
+case 19:var magenergie = 9;var pravdepodobnost="95%";break;
+case 20:var magenergie = 9;var pravdepodobnost="95%";break;
+case 21:var magenergie = 9;var pravdepodobnost="99%";break;
+}
+var schopnosti = schopnosti + "odvracení neviděných, ";
+}
+
+if (povolani=="zloděj")
+{
+var charisma=Math.random();
+if (document.formular.hardmode.checked) {var charisma=Math.round(charisma*3+3+11) + chr;} else {var charisma=Math.round(charisma*5+1+11) + chr;}
+var obratnost=Math.random();
+if (document.formular.hardmode.checked) {var obratnost=Math.round(obratnost*3+3+13) + obr;} else {var obratnost=Math.round(obratnost*5+1+13) + obr;}
+var zivoty=6;
+var magenergie = "nic";
+}
+
+if (povolani=="alchymista")
+{
+var odolnost=Math.random();
+if (document.formular.hardmode.checked) {var odolnost=Math.round(odolnost*3+3+11) + odl;} else {var odolnost=Math.round(odolnost*5+1+11) + odl;}
+var obratnost=Math.random();
+if (document.formular.hardmode.checked) {var obratnost=Math.round(obratnost*3+3+12) + obr;} else {var obratnost=Math.round(obratnost*5+1+12) + obr;}
+var zivoty=7;
+switch (obratnost)
+{
+case 8:var magenergie = 7;break;
+case 9:var magenergie = 7;break;
+case 10:var magenergie = 7;break;
+case 11:var magenergie = 7;break;
+case 12:var magenergie = 8;break;
+case 13:var magenergie = 8;break;
+case 14:var magenergie = 8;break;
+case 15:var magenergie = 8;break;
+case 16:var magenergie = 8;break;
+case 17:var magenergie = 9;break;
+case 18:var magenergie = 9;break;
+case 19:var magenergie = 9;break;
+case 20:var magenergie = 9;break;
+case 21:var magenergie = 9;break;
+}
+var schopnosti = schopnosti + "vycítění magenergie, ";
+}
+
+bonusy(sila);
+var bz_sila=document.formular.zaloha.value;
+bonusy(obratnost);
+var bz_obratnost=document.formular.zaloha.value;
+bonusy(odolnost);
+var bz_odolnost=document.formular.zaloha.value;
+bonusy(inteligence);
+var bz_inteligence=document.formular.zaloha.value;
+bonusy(charisma);
+var bz_charisma=document.formular.zaloha.value;
+
+pohyblivost=eval(pohyblivost);
+zivoty=eval(zivoty);
+bz_sila=eval(bz_sila);
+bz_odolnost=eval(bz_odolnost);
+bz_obratnost=eval(bz_obratnost);
+bz_ineligence=eval(bz_inteligence);
+bz_charisma=eval(bz_charisma);
+
+var zivoty = zivoty + bz_odolnost;
+var postih = zivoty / 3;
+if (odolnost >= 6 && odolnost <= 11)
+{
+var postih_cislo = -2;
+var vyrazeni = zivoty / 6;
+}
+
+if (odolnost >= 12 && odolnost <= 16)
+{
+var postih_cislo = -1;
+var vyrazeni = zivoty / 8;
+}
+
+if (odolnost >= 17 && odolnost <= 21)
+{
+var postih_cislo = 0;
+var vyrazeni = 1;
+}
+var postih=Math.round(postih);
+var vyrazeni=Math.round(vyrazeni);
+var pohyblivost = pohyblivost + 2 * bz_sila + bz_obratnost;
+
+bonusy(pohyblivost);
+var bz_pohyblivost=document.formular.zaloha.value;
+
+bonusy(Math.round(pohyblivost* 0.75));
+var bz_pohyblivost75=document.formular.zaloha.value;
+
+bonusy(Math.round(pohyblivost* 0.50));
+var bz_pohyblivost50=document.formular.zaloha.value;
+
+var pohyblibost = pohyblivost;
+bonusy(Math.round(pohyblivost* 0.25));
+var bz_pohyblivost25=document.formular.zaloha.value;
+switch (bz_sila)
+{
+case -4:var nosnost = 240;break;
+case -3:var nosnost = 270;break;
+case -2:var nosnost = 300;break;
+case -1:var nosnost = 330;break;
+case 0:var nosnost = 360;break;
+case 1:var nosnost = 390;break;
+case 2:var nosnost = 420;break;
+case 3:var nosnost = 450;break;
+case 4:var nosnost = 480;break;
+case 5:var nosnost = 510;break;
+}
+
+
+var mechanismy = inteligence / 2 + mechanismy;
+var mechanismy = Math.round(mechanismy);
+var objekty = inteligence + objekty;
+
+
+var wokno=window.open("", "okno", "height="+screen.height/2+", width="+screen.width/2+", menubar=yes, resizable=yes, scrollbars=yes");
+
+with (wokno.document)
+{
+writeln("<HTML>");
+writeln("<HEAD>");
+writeln("<TITLE>Dračí Doupě - Tvorba postavy jménem "+document.formular.jmeno.value+"</TITLE>");
+writeln("<META http-equiv=Content-Type content=\"text/html; charset=windows-1250\">");
+writeln("</HEAD>");
+writeln("<BODY bgcolor=white text=black>");
+writeln("<BASEFONT face=Verdana size=3>");
+writeln("<B>"+document.formular.jmeno.value+"</B><BR>");
+writeln("<B>"+rasa+" "+povolani+"</B><BR>");
+writeln("<B>přesvědčení "+presvedceni+"</B><BR>");
+writeln("<TABLE border=0 cellspacing=0 cellpadding=10 align=left>");
+writeln("<TR><TD valign=top>");
+writeln("<TABLE border=0 cellspacing=0 cellpadding=0>");
+writeln("<TR><TD>síla: </TD><TD>"+sila+" </TD><TD>/"+bz_sila+"</TD></TR>");
+writeln("<TR><TD>obratnost: </TD><TD>"+obratnost+" </TD><TD>/"+bz_obratnost+"</TD></TR>");
+writeln("<TR><TD>odolnost: </TD><TD>"+odolnost+" </TD><TD>/"+bz_odolnost+"</TD></TR>");
+writeln("<TR><TD>inteligence: </TD><TD>"+inteligence+" </TD><TD>/"+bz_inteligence+"</TD></TR>");
+writeln("<TR><TD>charisma: </TD><TD>"+charisma+" </TD><TD>/"+bz_charisma+"</TD></TR>");
+writeln("</TABLE><P>");
+writeln("<TD>");
+writeln("<TABLE cellspacing=0 cellpadding=0 border=0>");
+writeln("<TR><TD>životy:</TD><TD>"+zivoty+"</TD></TR>");
+writeln("<TR><TD>postih k boji:</TD><TD>"+postih+"("+postih_cislo+")</TD></TR>");
+writeln("<TR><TD>bezvědomí:</TD><TD>"+vyrazeni+"</TD></TR>");
+writeln("<TR><TD colspan=2></TD></TR>");
+writeln("<TR><TD>magenergie</TD><TD>"+magenergie +"</TD></TR>");
+if (povolani=="kouzelník") {writeln("<TR><TD>pravděpodobnost</TD><TD>"+pravdepodobnost+"</TD></TR>");}
+if (povolani=="kouzelník") {writeln("<TR><TD>počet kouzel</TD><TD>3</TD></TR>");}
+writeln("<TR><TH colspan=2> </TH></TR>")
+writeln("<TR><TH colspan=2 align=left>Postřeh</TH></TR>");
+writeln("<TR><TD>Objekty</TD><TD>"+objekty+"%</TD></TR>");
+writeln("<TR><TD>Mechanismy</TD><TD>"+mechanismy+"%</TD></TR>");
+writeln("<TR><TH colspan=2></TH></TR>")
+writeln("</TABLE>");
+writeln("<BR><P>");
+writeln("<TABLE border=0 cellpadding=0 cellspacing=0>");
+writeln("<TR><TD>pohyblivost:</TD><TD>nosnost</TD></TR>");
+writeln("<TR><TD>"+pohyblivost+" /"+bz_pohyblivost+"</TD><TD align=right>"+nosnost+"mn</TD></TR>");
+writeln("<TR><TD>"+Math.round((pohyblivost)* 0.75)+" /"+bz_pohyblivost75+"</TD><TD align=right>"+nosnost * 2+"mn</TD></TR>");
+writeln("<TR><TD>"+Math.round((pohyblivost)* 0.5)+" /"+bz_pohyblivost50+"</TD><TD align=right>"+nosnost * 3+"mn</TD></TR>");
+writeln("<TR><TD>"+Math.round((pohyblivost)* 0.25)+" /"+bz_pohyblivost25+"</TD><TD align=right>"+nosnost * 4+"mn</TD></TR>");
+writeln("</TABLE>");
+writeln("");
+writeln("schopnosti:<BR>");
+writeln(schopnosti);
+if (povolani=="zloděj") {
+writeln("<TABLE border=0 cellspacing=0 cellpadding=0>");
+writeln("<TR><TD>Převleky</TD><TD>"+ (5 + 3*bz_charisma)+"%</TD></TR>");
+writeln("<TR><TD>Získání důvěry</TD><TD>"+ (7 + 3*bz_charisma)+"%</TD></TR>");
+writeln("<TR><TD>Otevření mechanismu</TD><TD>"+ (10 + 2*bz_obratnost)+"%</TD></TR>");
+writeln("<TR><TD>Otevření objektu</TD><TD>"+ (15 + 3*bz_obratnost)+"%</TD></TR>");
+writeln("</TABLE>");
+}
+writeln("</TABLE>");
+writeln("</BODY>");
+writeln("</HTML>");
+}
+}
+
+function bonusy(vlastnost)
+{
+eval(bonus);
+var bonus;
+switch (vlastnost)
+{
+case 1:var bonus=-5;break;
+case 2:var bonus=-4;break;
+case 3:var bonus=-4;break;
+case 4:var bonus=-3;break;
+case 5:var bonus=-3;break;
+case 6:var bonus=-2;break;
+case 7:var bonus=-2;break;
+case 8:var bonus=-1;break;
+case 9:var bonus=-1;break;
+case 10:var bonus=0;break;
+case 11:var bonus=0;break;
+case 12:var bonus=0;break;
+case 13:var bonus=1;break;
+case 14:var bonus=1;break;
+case 15:var bonus=2;break;
+case 16:var bonus=2;break;
+case 17:var bonus=3;break;
+case 18:var bonus=3;break;
+case 19:var bonus=4;break;
+case 20:var bonus=4;break;
+case 21:var bonus=5;break;
+}
+
+document.formular.zaloha.value=bonus;
+document.formular.zaloha.value=eval(document.formular.zaloha.value);
+}
+//-->
+</SCRIPT>
+<LINK href="dragon.css" rel="StyleSheet" type="text/css">
+</HEAD>
+
+<BODY bgcolor=black text=#ff8000 link=#ff8000 vlink=#ff8000 alink="#FF0000" class="Posuvnik-zluty">
+<BASEFONT size=3 face="Verdana">
+  
+<H1 align=center><U>Tvorba postavy - DrDmaker 1.3 betaverze</U></H1>
+<P class="Zarovnani">
+Na této stránce si můžete vytvořit vlastní postavu do dračího doupěte. 
+Tento program byl vytvořen v JavaScriptu 1.2 pro prohlížeče
+<B>Internet Explorer</B> 4.0+, <B>Netscape Navigator</B> 6.0+ a <B>Opera</B> +- 6.0, ale měli
+byste mít prohlížeč v češtině - nemusíte čekat na server a pár sekund máte
+novou postavu. Po vypracování si to můžete normálně vytisknout. 
+(Program pracuje zatím pouze pro 1. úroveň), má ještě nějaký
+mouchy, vlastně když jsem tohle dělal vůbec jsem tomu nerozuměl.
+(nedovedl jsem k dokonalosti přesvědčení), ale ve většině případů to funguje.
+Tak můžete zkusit štěstí...
+</P><P>
+<FORM name="formular">
+<TABLE align=center>
+<TR><TH>Jméno postavy</TH><TH>Rasa</TH><TH>Povolání</TH><TH>Přesvědčení</TH></TR>
+<TR>
+<TH><INPUT type="text" name="jmeno" class="tucnak" size="20" maxlength="50"></TH>
+<TH>
+<SELECT name="rasa" onChange="kontrola();">
+<OPTION value="náhodná">náhodná</OPTION>
+<OPTION value="hobit">hobit</OPTION>
+<OPTION value="kudůk">kudůk</OPTION>
+<OPTION value="trpasík">trpaslík</OPTION>
+<OPTGROUP label="elfové">
+<OPTION value="elf" label="elf">elf</OPTION>
+<OPTION value="lesní elf" label="lesní elf">lesní elf</OPTION>
+</OPTGROUP>
+<OPTION value="člověk">člověk</OPTION>
+<OPTION value="barbar">barbar</OPTION>
+<OPTION value="kroll">kroll</OPTION>
+</SELECT>
+</TH>
+<TH>
+<SELECT name="povolani">
+<OPTION value="náhodné">náhodné</OPTION>
+<OPTION value="válečník">válečník</OPTION>
+<OPTION value="hraničář">hraničář</OPTION>
+<OPTION value="alchymista">alchymista</OPTION>
+<OPTION value="kouzelník">kouzelník</OPTION>
+<OPTION value="zloděj">zloděj</OPTION>
+</SELECT>
+</TH>
+<TH>
+<SELECT name="presvedceni" onBlur="kontrola();">
+<OPTION value="náhodné">náhodné</OPTION>
+<OPTION value="zákonné dobro">zákonné dobro</OPTION>
+<OPTION value="zmatené dobro">zmatené dobro</OPTION>
+<OPTION value="neutrální">neutrální</OPTION>
+<OPTION value="zmatené zlo">zmatené zlo</OPTION>
+<OPTION value="zákonné zlo">zákonné zlo</OPTION>
+</SELECT>
+</TH>
+</TR>
+<TR><TH colspan=4 align=left>
+<INPUT type="button" value="Vytvořit novou postavu" class="button" onClick="control(); neo();"><INPUT type="reset" value="Vymazat" class="button">
+</TH>
+</TR>
+<TR><TD colspan=4><INPUT type="Checkbox" name="hardmode" checked>Na základní házej 4-6</TD></TR>
+</TABLE>
+<INPUT type=hidden name="zaloha"><INPUT type=hidden name="zivoty">
+</FORM>
+<HR align="center" width="100%">
+<CENTER>
+<FONT class="Info">
+<SCRIPT type="text/javascript" language="JavaScript">
+<!--
+document.write("Datum poslední aktualizece: " + document.lastModified);
+//-->
+</SCRIPT>
+<BR>WebMaster: <A href="mailto:michal.vrchota@gmail.com" title="V případě problémů se stránkou mi napište" onMouseOver="window.status='Webmaster'; return true">
+<FONT size=2 class="Info"><B>Michal Vrchota</B></FONT></A> ©
+</FONT>
+<P>
+<A href="index.htm" onMouseOver="document.zpetk.src='img/zpet.gif'; window.status='Zpět na homepage'; return true;" onMouseOut="document.zpetk.src='img/zpet2.gif'" target="_top">
+<IMG src="img/zpet2.gif" width=117 height=27 border=0 alt="Zpět na homepage" name="zpetk"></A>
+</CENTER>
+</BODY>
+</HTML>

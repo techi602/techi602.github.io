@@ -1,0 +1,158 @@
+BODY
+{
+font-family: Verdana;
+font-size: 13px;
+background-color: black;
+}
+
+TD
+{
+font-family: Verdana;
+font-size: 13px;
+}
+
+
+H1
+{
+font-family: Verdana;
+font-size: 25px;
+}
+
+H2
+{
+font-family: Verdana;
+font-size: 20px;
+}
+
+H3
+{
+font-family: Verdana;
+font-size: 17px;
+}
+
+LI
+{
+font-family: Verdana;
+font-size: 13px;
+}
+
+UL
+{
+font-family: Verdana;
+font-size: 13px;
+}
+
+A:link
+{
+font-family: Verdana;
+font-size: 13px;
+text-decoration: none;
+}
+   
+A:visited
+{
+font-family: Verdana;
+font-size: 13px;
+text-decoration: none;
+}
+
+A:hover
+{
+font-family: Verdana;
+font-size: 13px;
+text-decoration: none;
+color: red;
+}
+   
+.Zarovnani
+{
+text-align: justify;
+font-family: Verdana;
+font-size: 13px;
+}
+
+.Info
+{
+font-family: Verdana;   
+font-size: 9px;
+}
+
+A:hover.mail
+{
+font-size: 16px;
+}
+
+
+.Nadpis
+{
+font-family: Verdana;
+font-size: 23px;
+color: #FF8000;
+}
+
+.Normal
+{
+font-family: Verdana;
+font-size: 20px;
+}
+
+.Hlavni
+{
+font-family: Verdana;
+font-size: 70px;
+}
+
+INPUT.tucnak
+{
+font-weight: bold;
+}
+
+INPUT.button
+{
+background-color: orange;
+}
+
+BODY.Posuvnik-cerveny
+{
+	scrollbar-face-color: red;
+	scrollbar-shadow-color: #FF6363;
+	scrollbar-highlight-color: red;
+	scrollbar-3dlight-color: black;
+	scrollbar-darkshadow-color:black;
+	scrollbar-track-color: black;
+	scrollbar-arrow-color: black;
+}
+
+BODY.Posuvnik-zeleny
+{
+scrollbar-face-color: green;
+scrollbar-shadow-color: lime;
+scrollbar-highlight-color: green;
+scrollbar-3dlight-color: black;
+scrollbar-darkshadow-color:black;
+scrollbar-track-color: black;
+scrollbar-arrow-color: black;
+}
+
+BODY.Posuvnik-cerny
+{
+scrollbar-face-color: black;
+scrollbar-shadow-color: black;
+scrollbar-highlight-color: black;
+scrollbar-3dlight-color: black;
+scrollbar-darkshadow-color:black;
+scrollbar-track-color: black;
+scrollbar-arrow-color: black;
+}
+
+BODY.Posuvnik-zluty
+{
+	scrollbar-face-color: yellow;
+	scrollbar-shadow-color: #CE9C00;
+	scrollbar-highlight-color: yellow;
+	scrollbar-3dlight-color: black;
+	scrollbar-darkshadow-color:black;
+	scrollbar-track-color: black;
+	scrollbar-arrow-color: black;
+}
+
