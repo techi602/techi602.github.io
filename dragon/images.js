@@ -1,4 +1,4 @@
-// Naètení obrázkù
+// NaÄtenÃ­ obrÃ¡zkÅ¯
 
 cela = new Image(117,27);
 cela.src = "img/cela.gif";
