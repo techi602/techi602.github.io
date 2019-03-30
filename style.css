@@ -1,0 +1,306 @@
+@font-face {
+
+    font-family: 'Goodtime';
+
+    src: url('font/goodtime.eot');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'Goodtime';
+
+    src: url('font/goodtime.woff');
+
+}
+
+
+
+body
+
+{
+
+    padding: 0px;
+
+    border: 0px;
+
+    margin: 0px;
+
+    font-family: Goodtime, sans-serif;
+
+    font-size: 0.8em;
+
+    color: #212121;
+
+    background: #ffffff url('images/it_bg2.png') no-repeat right top;
+
+
+
+}
+
+
+
+
+
+img
+
+{
+
+    border: 0px;
+
+}
+
+
+
+
+
+.line
+
+{
+
+    background-color: #CCCCCC;
+
+    width: 100%;
+
+    height: 4px;
+
+    float: left;
+
+    clear: both;
+
+}
+
+
+
+.cl
+
+{
+
+    clear: both;
+
+}
+
+
+
+#avatar
+
+{
+
+    float: right;
+
+    border: 0px;
+
+    margin-right: 20px;
+
+    padding: 10px;
+
+    width: 100px;
+
+    display:block;
+
+    border-radius: 40px;
+
+    -moz-border-radius: 40px;
+
+    -webkit-border-radius: 40px;
+
+}
+
+
+
+#icons
+
+{
+
+    float: right;
+
+}
+
+
+
+#icons img
+
+{
+
+    padding: 5px;
+
+    margin-left: 10px;
+
+    width: 60px;
+
+    height: 60px;
+
+
+
+}
+
+
+
+#icons img:hover
+
+{
+
+    width: 70px;
+
+    height: 70px;
+
+    padding: 0px;
+
+
+
+}
+
+
+
+
+
+#main
+
+{
+
+    width: 785px;
+
+    float: left;
+
+    padding-top: 20px;
+
+    text-align: right;
+
+}
+
+
+
+h1
+
+{
+
+    color: #4197E3;
+
+    font-weight: bold;
+
+    font-size: 2em;
+
+
+
+}
+
+
+
+h2
+
+{
+
+    color: #4197E3;
+
+    font-weight: bold;
+
+    font-size: 1em;
+
+
+
+
+
+}
+
+
+
+
+
+#projects
+
+{
+
+    width: 785px;
+
+    float: left;
+
+    padding-top: 20px;
+
+    text-align: right;
+
+}
+
+
+
+.project
+
+{
+
+    float: left;
+
+    width: 765px;
+
+    clear: both;
+
+}
+
+
+
+.project img
+
+{
+
+    float: left;
+
+    margin-left: 20px;
+
+    padding: 15px;
+
+    width: 50px;
+
+}
+
+
+
+.project a
+
+{
+
+    font-size: 1.5em;
+
+    color: #4197E3;
+
+    font-weight: bold;
+
+    float: left;
+
+}
+
+
+
+.project a span
+
+{
+
+    display: block;
+
+    padding-top: 33px;
+
+    clear: both;
+
+}
+
+
+
+p
+
+{
+
+    text-align: right;
+
+    display: block;
+
+    /* padding-left: 50px; */
+
+    float: right;
+
+    padding-top: 23px;
+
+    font-size: 1em;
+
+
+
+}
+
